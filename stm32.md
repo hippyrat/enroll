@@ -41,3 +41,19 @@ extern：用于声明一个变量，但不在当前作用域内为其分配存�
 例如：extern int globalVar; // 声明全局变量 globalVar
 register：用于提示编译器将变量存储在CPU寄存器中，以便提高访问速度。
 例如：register int counter; // 提示编译器将 counter 存储在寄存器中
+## 3.
+我觉得第三题真的有点难，记录一下写的思路我怕乱了
+char *token = strtok(strdup(input), ",");：这一行代码的执行步骤大概是这样的：
+
+strdup(input)：首先，strdup 函数用于复制字符串 input，并返回一个新的字符串的指针。这是因为 strtok 函数会修改原始字符串，而我想保持原始字符串不变。
+
+strtok(..., ",")：接下来用 strtok 函数来拆分字符串。strtok 函数接受两个参数，第一个参数是要拆分的字符串（在这里是通过 strdup 复制的原始输入字符串），第二个参数是用于指定分隔符的字符（在这里是逗号 ","）。
+
+char *token：strtok 返回拆分后的第一个子字符串的指针，并将其赋值给 token 变量。
+
+num1 = atoi(token);：这一行代码使用 atoi 函数将 token 中的字符串转换为整数，并将结果存储在 num1 变量中。atoi函数用于将字符串表示的整数转换为整数值。
+
+token = strtok(NULL, ",");：这一行代码用于继续拆分字符串，获取下一个子字符串。通过传递 NULL 作为第一个参数，告诉 strtok 函数继续使用之前的字符串进行拆分。strtok 返回下一个拆分后的子字符串的指针，并将其赋值给 token 变量。
+
+num2 = atoi(token);：这一行代码与之前类似，将 token 中的第二个子字符串转换为整数，并将结果存储在 num2 变量中。
+
