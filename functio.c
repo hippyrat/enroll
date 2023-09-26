@@ -36,12 +36,12 @@ void haomafan(const char *input) {
     }
 
 int main() {
-    char input[100]; // 用于存储用户输入的字符串
+    char input[100]; // 用于存储输入的字符串
     
     printf("Enter a string in the format \"num1,num2\": ");
     scanf("%s", input);
     
-    // 调用函数处理用户输入的字符串
+    // 调用函数
     haomafan(input);
     
     return 0;

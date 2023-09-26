@@ -17,7 +17,7 @@ int main()
     i=0,j=0;
     while(num<=n*n)
     {
-        if(a[i][j]=-1)//判断之前有没有被填充过数字
+        if(a[i][j]==-1)//判断之前有没有被填充过数字
         {
             a[i][j]=num;
             num++;
@@ -58,7 +58,7 @@ int main()
     }
     for(i=0;i<n-1;i++)
     {
-        for(i=0;j<n-1;j++)
+        for(j=0;j<n-1;j++)
         {
                 printf("%3d",a[i][j]);
         }
