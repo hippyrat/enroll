@@ -56,4 +56,3 @@ num1 = atoi(token);：这一行代码使用 atoi 函数将 token 中的字符串
 token = strtok(NULL, ",");：这一行代码用于继续拆分字符串，获取下一个子字符串。通过传递 NULL 作为第一个参数，告诉 strtok 函数继续使用之前的字符串进行拆分。strtok 返回下一个拆分后的子字符串的指针，并将其赋值给 token 变量。
 
 num2 = atoi(token);：这一行代码与之前类似，将 token 中的第二个子字符串转换为整数，并将结果存储在 num2 变量中。
-
