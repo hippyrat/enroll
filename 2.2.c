@@ -1,3 +1,14 @@
+//auto、break、case、char、const、continue、default、do、double、else、enum、extern、float、for、goto、if、int、long、register、return、short、signed、sizeof、static、struct、switch、typedef、union、unsigned、void、volatile、while
+//auto, static, extern, register都是储存类型关键字。
+//auto：通常用于局部变量声明，它表示变量在局部作用域中自动存储，是C语言默认的储存类型，因此通常不需要写出来，用的似乎比较少。
+//例如：auto int x;
+//static：用于声明静态变量，静态变量在程序运行期间保持其值，不会在函数调用之间丢失。常用于需要在函数调用之间保留值的情况，如计数器。
+//例如：static int count = 0; 静态变量，只会初始化一次
+//extern：用于声明一个变量，但不在当前作用域内为其分配存储空间，通常用于引用在其他文件中定义的全局变量。（由于是初学现在没怎么使用过这个）
+//例如：extern int globalVar; 声明全局变量 globalVar
+//register：用于提示编译器将变量存储在CPU寄存器中，以便提高访问速度。
+//例如：register int counter; 提示编译器将 counter存储在寄存器中
+
 #include <stdio.h>
 #include <string.h>
 
